@@ -8,7 +8,6 @@
         $words = json_decode(file_get_contents('https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json'), true);
 
         //Split our input into letters and sort alphaabetically
-        $start_time = microtime(true);
         $input_array = str_split($input);
         sort($input_array);
 
@@ -22,7 +21,6 @@
                 break;
             }
         }
-        echo '<br>' . number_format(( microtime(true) - $start_time), 4);
 
         return $output;
     }
